@@ -1,0 +1,29 @@
+# Environments & Secret Keys
+.env
+venv/
+env/
+ENV/
+
+# Python cache & build files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+*.egg-info/
+.eggs/
+
+# Node & Frontend dependencies/build
+node_modules/
+frontend/node_modules/
+frontend/dist/
+dist/
+
+# OS & Editor generated files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Logs
+*.log
