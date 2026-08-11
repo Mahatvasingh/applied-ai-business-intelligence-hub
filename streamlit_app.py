@@ -170,6 +170,9 @@ with tab_clustering:
     conn.close()
     
     if not segments_df.empty:
+        if "segment_label" not in segments_df.columns:
+            segments_df["segment_label"] = segments_df["cluster_id"].apply(lambda c: f"Segment {c}")
+            
         col_left, col_right = st.columns([1, 2])
         
         with col_left:

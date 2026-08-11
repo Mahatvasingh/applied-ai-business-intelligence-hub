@@ -1,89 +1,102 @@
-# Customer Cluster Analysis Report
-## Date: December 2023
-## Total Customer Base: 1000
+# Executive Customer Insights & Segmentation Report
 
-# Executive Summary
-The customer base consists of 1000 customers, segmented into four distinct clusters based on their demographic and behavioral data. The segment distribution is as follows: Cluster 0 (9.2%), Cluster 1 (25.9%), Cluster 2 (26.0%), and Cluster 3 (38.9%). Key findings include:
-* Cluster 1 has the highest frequency of purchases and average spend, indicating a loyal customer base.
-* Cluster 2 has the highest average income and spend, presenting an opportunity for premium product offerings.
-* Cluster 3 has the largest customer count, but lower average spend and frequency, suggesting a need for targeted marketing campaigns to increase engagement.
+## Executive Summary
+This report analyzes a customer base of **1000** active customers over a 6-month historical window. By integrating demographic variables (Age, Income) with web log metrics (Session Duration, Pages Viewed) and purchase metrics (Recency, Frequency, Monetary Value), an unsupervised K-Means clustering algorithm identified **four (4) distinct customer segments**. 
 
-# Segment Analysis
-### Cluster 0: "Casual Shoppers"
-* Customer Count: 92 (9.2%)
-* Avg Age: 39.5 years
-* Avg Income: $67,945.60
-* Avg Recency (Days since last purchase): 107.3 days
-* Avg Frequency (Purchases in 6mo): 2.4 purchases
-* Avg Spend (Monetary value in 6mo): $202.73
-* Avg Session Duration: 468.0 seconds
-* Avg Pages Viewed per Session: 5.2
-Casual Shoppers are less frequent buyers with lower average spend. They require targeted marketing efforts to increase purchase frequency and engagement.
+These segments reveal clear customer behavioral archetypes, ranging from highly engaged digital browsers to high-value VIP shoppers and churning customers. Establishing target campaigns for these behaviors yields substantial opportunities to lift customer lifetime value, optimize marketing return on investment, and proactively prevent churn.
 
-### Cluster 1: "Young Enthusiasts"
-* Customer Count: 259 (25.9%)
-* Avg Age: 23.7 years
-* Avg Income: $46,758.16
-* Avg Recency (Days since last purchase): 20.1 days
-* Avg Frequency (Purchases in 6mo): 6.9 purchases
-* Avg Spend (Monetary value in 6mo): $344.49
-* Avg Session Duration: 685.2 seconds
-* Avg Pages Viewed per Session: 8.0
-Young Enthusiasts are frequent buyers with high engagement. They are ideal targets for loyalty programs and social media marketing campaigns.
+---
 
-### Cluster 2: "Affluent Buyers"
-* Customer Count: 260 (26.0%)
-* Avg Age: 42.7 years
-* Avg Income: $70,264.52
-* Avg Recency (Days since last purchase): 17.4 days
-* Avg Frequency (Purchases in 6mo): 7.2 purchases
-* Avg Spend (Monetary value in 6mo): $627.55
-* Avg Session Duration: 457.3 seconds
-* Avg Pages Viewed per Session: 4.9
-Affluent Buyers have high average income and spend. They are likely to respond to premium product offerings and personalized marketing campaigns.
+## Segment Analysis
 
-### Cluster 3: "Mainstream Customers"
-* Customer Count: 389 (38.9%)
-* Avg Age: 43.5 years
-* Avg Income: $70,335.72
-* Avg Recency (Days since last purchase): 23.3 days
-* Avg Frequency (Purchases in 6mo): 3.9 purchases
-* Avg Spend (Monetary value in 6mo): $312.52
-* Avg Session Duration: 467.1 seconds
-* Avg Pages Viewed per Session: 5.0
-Mainstream Customers are the largest segment, but have lower average spend and frequency. They require targeted marketing efforts to increase engagement and loyalty.
+### Segment 0: Churn Risk / Lapsed Customers
+* **Descriptive Persona**: *Lapsed Casual Buyers*
+* **Segment Size**: 92 customers (9.2% of customer base)
+* **Demographic Profile**: Avg Age 39.5 years | Avg Income $67,945.60
+* **Behavioral & Web Profile**: 
+  * **Recency**: 107.3 days (Inactive for over 3 months)
+  * **Frequency**: 2.4 purchases in 6 months
+  * **Spend**: $202.73 total spent
+  * **Digital Engagement**: 468.0 seconds duration | 5.2 pages/session
+* **Analysis**: This segment contains mature, middle-income customers who have become disengaged. Their purchase frequency is extremely low, and they have not made a purchase index of over 100 days. While their browsing sessions are moderate, they are not converting.
 
-# Actionable Business Recommendations
-### Cluster 0: "Casual Shoppers"
-1. **Re-engagement Campaigns**: Send targeted email campaigns to inactive customers to encourage repeat purchases.
-2. **Personalized Offers**: Provide personalized product recommendations based on purchase history to increase average spend.
-3. **Loyalty Program**: Introduce a loyalty program to reward frequent buyers and increase customer retention.
+---
 
-### Cluster 1: "Young Enthusiasts"
-1. **Social Media Campaigns**: Launch social media campaigns to engage with Young Enthusiasts and increase brand awareness.
-2. **Influencer Partnerships**: Partner with social media influencers to promote products and increase reach.
-3. **Exclusive Offers**: Offer exclusive discounts and promotions to Young Enthusiasts to increase loyalty and retention.
+### Segment 1: Digitally Enthusiastic Core (Gen Z / Millennial Browsers)
+* **Descriptive Persona**: *Digital-First Impulse Buyers*
+* **Segment Size**: 259 customers (25.9% of customer base)
+* **Demographic Profile**: Avg Age 23.7 years | Avg Income $46,758.16
+* **Behavioral & Web Profile**: 
+  * **Recency**: 20.1 days (Highly active recently)
+  * **Frequency**: 6.9 purchases in 6 months
+  * **Spend**: $344.49 total spent
+  * **Digital Engagement**: 685.2 seconds duration | 8.0 pages/session
+* **Analysis**: Representing young, tech-savvy buyers with lower incomes, this cluster features the highest digital session length and pages viewed (8.0 pages/session). They buy frequently, but their average transaction size is small.
 
-### Cluster 2: "Affluent Buyers"
-1. **Premium Product Offerings**: Introduce premium products and services to cater to Affluent Buyers' high average income and spend.
-2. **Personalized Marketing**: Provide personalized marketing campaigns and product recommendations to increase engagement and loyalty.
-3. **Luxury Experience**: Offer luxury experiences, such as exclusive events and personalized customer service, to increase customer satisfaction.
+---
 
-### Cluster 3: "Mainstream Customers"
-1. **Targeted Marketing**: Launch targeted marketing campaigns to increase engagement and loyalty among Mainstream Customers.
-2. **Product Bundles**: Offer product bundles and discounts to increase average spend and frequency.
-3. **Customer Feedback**: Collect customer feedback to improve products and services and increase customer satisfaction.
+### Segment 2: VIP Premium Spenders
+* **Descriptive Persona**: *High-Value Brand Advocates*
+* **Segment Size**: 260 customers (26.0% of customer base)
+* **Demographic Profile**: Avg Age 42.7 years | Avg Income $70,264.52
+* **Behavioral & Web Profile**: 
+  * **Recency**: 17.4 days (Recent transactions)
+  * **Frequency**: 7.2 purchases in 6 months
+  * **Spend**: $627.55 total spent (Highest group spend)
+  * **Digital Engagement**: 457.3 seconds duration | 4.9 pages/session
+* **Analysis**: The most valuable customer segment. These are high-earning, mature customers who spend heavily ($627.55 average total spend) and buy frequently, despite spending less time page-browsing. They are highly transactional, high-intent brand champions.
 
-# Power BI Visualization Guide
-To build interactive dashboards, follow these steps:
-1. **Create a customer segments table**: Create a table with customer segment information, including cluster assignment and demographic data.
-2. **Join customer segments to customer data**: Join the customer segments table to the customer data table using the customer ID.
-3. **Join customer data to transaction data**: Join the customer data table to the transaction data table using the customer ID.
-4. **Create visualizations**: Create visualizations, such as bar charts and scatter plots, to display customer segment information and transaction data.
-5. **Use filters and slicers**: Use filters and slicers to enable interactive filtering and exploration of the data.
-Example schema relationships:
-```sql
-customer_segments
-  JOIN customers ON customer_segments.customer_id = customers.customer_id
-  JOIN transactions ON customers.customer_id = transactions.customer_id
-```
+---
+
+### Segment 3: Steady Standard Shoppers
+* **Descriptive Persona**: *Consistent Household Buyers*
+* **Segment Size**: 389 customers (38.9% of customer base)
+* **Demographic Profile**: Avg Age 43.5 years | Avg Income $70,335.72
+* **Behavioral & Web Profile**: 
+  * **Recency**: 23.3 days (Moderate activity)
+  * **Frequency**: 3.9 purchases in 6 months
+  * **Spend**: $312.52 total spent
+  * **Digital Engagement**: 467.1 seconds duration | 5.0 pages/session
+* **Analysis**: This is the largest segment of the customer base. They represent the standard customer with average incomes, moderate frequency, and steady spend, forming the stable baseline revenue of the business.
+
+---
+
+## Actionable Business Recommendations
+
+### Recommendations for Segment 0 (Lapsed Casual Buyers)
+1. **Re-engagement Email Campaigns**: Deploy direct Win-Back email promotions with high-discount incentives (e.g., 'We Miss You: Get 25% Off Your Next Order') targeted at their historic purchase categories.
+2. **Web Session Exit Polls**: Set up triggered surveys when these users return to detect price sensitivity or friction points.
+3. **Tailored Remarketing**: Run paid retargeting ads on social channels displaying low-price entry items to lower the hurdle for a second trial.
+
+### Recommendations for Segment 1 (Digital-First Impulse Buyers)
+1. **Flash Sales & In-App Gamification**: Since they browse frequently, introduce loyalty points or app-exclusive time-bound sales to increase conversion rates.
+2. **Product Bundling**: Offer 'Buy More, Save More' bundles (e.g., combining Apparel and Books) to increase their low average order value.
+3. **Social Commerce Targeting**: Focus marketing efforts on channels like Instagram or TikTok, displaying curated lifestyle collections.
+
+### Recommendations for Segment 2 (High-Value Brand Advocates)
+1. **VIP Loyalty Tier**: Grant exclusive access to early product launches, free express shipping, and a dedicated VIP support helpline.
+2. **Subscription/Premium Tier Upsell**: Pitch subscription-based loyalty models to lock in recurring revenue from high-spending patterns.
+3. **Referral Reward Program**: Incentivize these loyal advocates to refer peers by offering premium tier bonuses.
+
+### Recommendations for Segment 3 (Consistent Household Buyers)
+1. **Tiered Spend Promotions**: Encourage higher purchase order sizes by offering thresholds (e.g., 'Free shipping on orders over $75' or '$10 off $100').
+2. **Cross-Category Recommendations**: Use transaction history to cross-sell recommendations (e.g., Groceries buyers recommended with kitchen/Home products).
+3. **Quarterly Loyalty Reviews**: Send points updates and loyalty check-ins to build stronger retention bonds.
+
+---
+
+## Power BI Visualization Guide
+
+### Relational Schema Blueprint
+To build interactive tracking dashboards in Power BI, developers can connect directly to the SQLite `analytics.db` database. The `customer_segments` table acts as the unified analytics view. 
+
+#### Schema Setup:
+* **Table Relations (1-to-Many)**:
+  * Connect `customers.customer_id` (1) to `customer_segments.customer_id` (1) - *1:1 Relationship (or Join logically)*.
+  * Connect `customer_segments.customer_id` (1) to `transactions.customer_id` (Many) - *Active Cross-Filtering*.
+  * Connect `customer_segments.customer_id` (1) to `web_logs.customer_id` (Many) - *Active Cross-Filtering*.
+
+#### Recommended Visualizations:
+* **Cluster Overview Card**: Cluster Segment Selector as a Slicing filter.
+* **Demographic Scatter Plot**: Age (X-axis) vs. Income (Y-axis) colored by `cluster_id`.
+* **Value Bubble Chart**: Average Recency (X-axis) vs. Average Frequency (Y-axis), with size represented by Average Monetary Spent, showing the distinct positions of VIP Spenders (high-frequency, low-recency, large size) vs. Lapsed Buyers (high-recency, low-frequency, small size).

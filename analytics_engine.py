@@ -85,6 +85,15 @@ def run_analytics():
     kmeans = KMeans(n_clusters=best_k, random_state=42, n_init=10)
     features_df["cluster_id"] = kmeans.fit_predict(X_scaled)
     
+    # Map cluster IDs to descriptive segment labels
+    persona_map = {
+        0: "Segment 0 - Lapsed Buyers",
+        1: "Segment 1 - Digital Browsers",
+        2: "Segment 2 - VIP Spenders",
+        3: "Segment 3 - Steady Shoppers"
+    }
+    features_df["segment_label"] = features_df["cluster_id"].map(lambda cid: persona_map.get(cid, f"Segment {cid}"))
+    
     # Profile clusters
     print("\n--- Profile of Segmented Customer Clusters ---")
     profiles = features_df.groupby("cluster_id").agg(
